@@ -15,32 +15,30 @@ import AuthProvider from './components/AuthProvider.jsx'
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <App />,
-    children: [
-      {
-        path: '/coffees',
-        element: <Coffees />,
-        loader: () => fetch('http://localhost:8000/coffee')
-      },
-      {
-        path: '/addcoffee',
-        element: <AddCoffee />
-      },
-      {
-        path: '/updatecoffee/:id',
-        element: <UpdateCoffee />,
-        loader: ({ params }) => fetch(`http://localhost:8000/coffee/${params.id}`)
-      },
-      {
-        path: '/signup',
-        element: <SignUp />
-      },
-      {
-        path: '/signin',
-        element: <SignIn />
-      }
-    ]
+  },
+  {
+    path: "/coffees",
+    element: <Coffees />,
+    loader: () => fetch('http://localhost:8000/coffee')
+  },
+  {
+    path: "/addcoffee",
+    element: <AddCoffee />
+  },
+  {
+    path: "/updatecoffee/:id",
+    element: <UpdateCoffee />,
+    loader: ({ params }) => fetch(`http://localhost:8000/coffee/${params.id}`)
+  },
+  {
+    path: "/signup",
+    element: <SignUp />
+  },
+  {
+    path: "/signin",
+    element: <SignIn />
   }
 ])
 
