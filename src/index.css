@@ -1,0 +1,22 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.coffee-input-form{
+  padding: 70px 112px;
+}
+
+.coffee-input-form>:last-child{
+  width: 100%;
+  font-family: 'rancho';
+  font-size: 24px;
+  grid-column: span 2;
+  background-color: #D2B48C;
+  border-radius: 5px;
+  border: 2px solid #331A15;
+  margin-top: 20px;
+}
+
+.input-field:nth-last-child(2){
+  grid-column: span 2;
+}
